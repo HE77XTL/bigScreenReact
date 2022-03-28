@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+
+</head>
+<script>
+    const designWidth = 192;
+    const innerWidth = window.innerWidth;
+    const innerHeight = window.innerHeight;
+    const scale = 16 / 9;
+    const AppWidth = (innerWidth / innerHeight > scale) ? innerHeight * scale : innerWidth;
+    const rootFontSize = AppWidth / designWidth;
+    document.write(`<style>html{font-size:${rootFontSize}px;}</style>`)
+</script>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
